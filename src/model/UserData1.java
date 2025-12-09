@@ -2,22 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Model;
+package model;
 
 /**
  *
- * @author Asus
+ * @author acer
  */
-
-
-
-public class UserData {
+public class UserData1 {
     private final String name;
     private final String email;
     private final String phone;
     private final String password;
 
-    public UserData(String name, String email, String phone, String password) {
+    public UserData1(String name, String email, String phone, String password) {
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -25,8 +22,10 @@ public class UserData {
     }
 
     // Getters
+    
     public String getName() { return name; }
     public String getEmail() { return email; }
     public String getPhone() { return phone; }
     public String getPassword() { return password; }
 }
+

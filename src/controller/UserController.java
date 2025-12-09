@@ -2,61 +2,87 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Controller;
-
-import Dao.userDao;
+package controller;
 import Model.UserData;
+import dao.UserDao;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import view.Login;
-import view.signUp;
+import view.SignUp;
 
 /**
  *
- * @author rohit
+ * @author acer
  */
 public class UserController {
-    private final userDao userdao= new userDao();
-    private final signUp userView;
-    
-    public  UserController (signUp userView){
-        this.userView=userView;
-        
-        userView.AddAAUserListener(new AddActionListener());
-    }
-    public void open(){
-        this.userView.setVisible(true);
-    }
-    public void closer(){
-        this.userView.dispose();
+ 
+    private final UserDao userdao = new UserDao();
+    private final SignUp signUpView;
+      public UserController(SignUp signUpView) {
+        this.signUpView = signUpView;
+
+        // Add event listener to SIGNUP BUTTON
+        signUpView.addSignUpListener(new SignUpAction());
     }
 
-    class AddActionListener implements ActionListener {
-@Override
-    public void actionPerformed (ActionEvent e){
-        try{
-            String username= userView.getUsername().getText();
-            String email= userView.getEmail().getText();
-            String password = userView.getPassword().getText();
-            UserData userdata = new UserData(username,email);
-            boolean check = userdao.check(userdata);
-            if(check){
-                JOptionPane.showMessageDialog(userView,"Duplicate user");
-            }else{
-                userdao.signUp(userdata);
-                JOptionPane.showMessageDialog(userView,"Sucessful");
-                
-                Login lc = new Login();
-                LoginController log= new LoginController(lc);
-                closer();
-                log.open();
+    public void open() {
+        signUpView.setVisible(true);
+    }
+
+    public void close() {
+        signUpView.dispose();
+    }
+
+    class SignUpAction implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            try {
+                // Collect data from your SignUp.java fields
+               
+
+                // Basic validations
+                if (email.equals("") || email.equals("Enter your email")
+                        || phone.equals("") || phone.equals("Enter your phone number")
+                        || name.equals("") || name.equals("Enter your name")
+                        || password.equals("") || password.equals("Enter your password")
+                        || confirm.equals("") || confirm.equals("Enter your password")) {
+
+                    JOptionPane.showMessageDialog(signUpView, "Please fill all fields!");
+                    return;
+                }
+
+                if (!password.equals(confirm)) {
+                    JOptionPane.showMessageDialog(signUpView, "Passwords do not match!");
+                    return;
+                }
+
+                // Create UserData object
+                UserData userdata = new UserData(name, email, password);
+
+                // Check if user already exists
+                boolean exists = userdao.check(userdata);
+
+                if (exists) {
+                    JOptionPane.showMessageDialog(signUpView, "User already exists!");
+                } else {
+                    userdao.SignUp(userdata);
+                    JOptionPane.showMessageDialog(signUpView, "Signup Successful!");
+
+                    // Open Login Page
+                    login loginView = new login();
+                    LoginController logController = new LoginController(loginView);
+
+                    close();          // close signup
+                    logController.open(); // open login
+                }
+
+            } catch (HeadlessException ex) {
+                System.out.println("Error in UserController: " + ex);
             }
-        }catch (HeadlessException ex){
-            System.out.println(ex.getMessage());
         }
     }
-        }
-}    
 
+}
