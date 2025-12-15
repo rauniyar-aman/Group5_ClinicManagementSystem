@@ -239,16 +239,16 @@ public class Login extends javax.swing.JFrame {
         
     }
     
-    public javax.swing.JTextField getPasswordText() {
+    public javax.swing.JTextField getPassword() {
         return txtPassword;
     }
-    public javax.swing.JTextField getUsername() {
+    
+
+    public javax.swing.JTextField getEmail() {
         return txtEmail;
     }
-
     
     
 }
-
 
 
