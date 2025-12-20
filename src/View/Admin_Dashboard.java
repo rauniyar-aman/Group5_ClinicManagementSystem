@@ -1,5 +1,7 @@
 package view;
 
+import Controller.DoctorController;
+
 /**
  *
  * @author amang
@@ -48,7 +50,10 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jButton3.addActionListener(this::jButton3ActionPerformed);
 
         jButton2.setBackground(new java.awt.Color(222, 242, 251));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user_icon_72x72.png"))); // NOI18N
+        {
+            java.net.URL img = getClass().getResource("/Images/user_icon_72x72.png");
+            jButton2.setIcon(img != null ? new javax.swing.ImageIcon(img) : null);
+        }
         jButton2.addActionListener(this::jButton2ActionPerformed);
 
         jButton5.setBackground(new java.awt.Color(255, 102, 102));
@@ -60,7 +65,10 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CLINIC MANAGEMENT SYSTEM");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cms logo.png"))); // NOI18N
+        {
+            java.net.URL img = getClass().getResource("/Images/cms logo.png");
+            jLabel3.setIcon(img != null ? new javax.swing.ImageIcon(img) : null);
+        }
         jLabel3.setText("jLabel2");
         jLabel3.setPreferredSize(new java.awt.Dimension(38, 37));
 
@@ -131,15 +139,29 @@ public class Admin_Dashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        // Profile button - open signUp (placeholder for real profile view)
+        this.dispose();
+        SignUp s = new SignUp();
+        s.setLocationRelativeTo(null);
+        s.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        // Open Add Doctor view wired with DoctorController
+        Add_Doctor view = new Add_Doctor();
+        DoctorController controller = new DoctorController();
+        view.setController(controller);
+        view.setLocationRelativeTo(this);
+        view.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        // Open Delete Doctor view wired with DoctorController
+        Delete_Doctor1 view = new Delete_Doctor1();
+        DoctorController controller = new DoctorController();
+        view.setController(controller);
+        view.setLocationRelativeTo(this);
+        view.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

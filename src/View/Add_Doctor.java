@@ -1,4 +1,6 @@
-package View;
+package view;
+
+import Controller.DoctorController;
 
 /**
  *
@@ -50,7 +52,10 @@ public class Add_Doctor extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(70, 155, 230));
 
         jButton2.setBackground(new java.awt.Color(222, 242, 251));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user_icon_72x72.png"))); // NOI18N
+        {
+            java.net.URL img = getClass().getResource("/Images/user_icon_72x72.png");
+            jButton2.setIcon(img != null ? new javax.swing.ImageIcon(img) : null);
+        }
         jButton2.addActionListener(this::jButton2ActionPerformed);
 
         jButton5.setBackground(new java.awt.Color(255, 102, 102));
@@ -63,7 +68,10 @@ public class Add_Doctor extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CLINIC MANAGEMENT SYSTEM");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cms logo.png"))); // NOI18N
+        {
+            java.net.URL img = getClass().getResource("/Images/cms logo.png");
+            jLabel3.setIcon(img != null ? new javax.swing.ImageIcon(img) : null);
+        }
         jLabel3.setText("jLabel2");
         jLabel3.setPreferredSize(new java.awt.Dimension(38, 37));
 
@@ -108,6 +116,7 @@ public class Add_Doctor extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(153, 255, 153));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("Save Doctor");
+        jButton1.addActionListener(this::saveDoctorActionPerformed);
 
         jButton3.setBackground(new java.awt.Color(255, 153, 153));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -244,7 +253,34 @@ public class Add_Doctor extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Add_Doctor().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> {
+            Add_Doctor view = new Add_Doctor();
+            Controller.DoctorController controller = new Controller.DoctorController();
+            view.setController(controller);
+            view.setVisible(true);
+        });
+    }
+
+    // Controller hook
+    private DoctorController controller;
+
+    public void setController(DoctorController controller) {
+        this.controller = controller;
+        if (controller != null) {
+            jButton1.addActionListener(e -> saveDoctorActionPerformed(null));
+        }
+    }
+
+    private void saveDoctorActionPerformed(java.awt.event.ActionEvent evt) {
+        if (this.controller != null) {
+            String name = jTextField1.getText();
+            String email = jTextField2.getText();
+            String phone = jTextField3.getText();
+            String department = (String) jComboBox1.getSelectedItem();
+            boolean ok = this.controller.addDoctor(name, email, phone, department);
+            if (ok) javax.swing.JOptionPane.showMessageDialog(this, "Doctor saved successfully");
+            else javax.swing.JOptionPane.showMessageDialog(this, "Error saving doctor");
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
