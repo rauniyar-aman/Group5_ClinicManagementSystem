@@ -4,11 +4,11 @@
  */
 package Group5_ClinicManagementSystem;
 
-import Controller.UserController;
-import Database.Database;
-import Database.MySqlConnection;
-import view.signUp;
-
+import controller.UserController;
+import database1.Database;
+import database1.MySqlConnection;
+import view.SignUp;
+import java.sql.*;
 /**
  *
  * @author oakin
@@ -25,7 +25,7 @@ public class Group5_ClinicManagementSystem {
             System.out.println("connection opened");
         }else{
             System.out.println("connection closed");
-        signUp signup = new signUp();
+        SignUp signup = new SignUp();
     UserController usercontroller = new UserController(signup);
     usercontroller.open();
 

@@ -3,10 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
+import javax.swing.*;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JPasswordField;
-
 
 
 
@@ -16,42 +14,21 @@ import javax.swing.JPasswordField;
  * @author acer
  */
 public class SignUp extends javax.swing.JFrame {
-    // Your text fields and buttons
-
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(SignUp.class.getName());
+
+    public static void addActionListener(ActionListener Listener) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
 
     /**
      * Creates new form SignUp
      */
     public SignUp() {
         initComponents();
-        setSize(740,500);
+      
     }
-// Password fields
-public JPasswordField getTxtPassword() {
-    return (JPasswordField) password;
-}
-
-public JPasswordField getTxtConfirmPassword() {
-    return (JPasswordField) confirmPassword;
-}
-
-// Show/hide password button
-public JButton getBtnShowHidePassword() {
-        JButton btnShowHidePassword = null;
-    return btnShowHidePassword;
-}
-
-    
- 
-    // Getters
-    
-    // Add event listener
-    public void addSignUpListener(ActionListener listener) {
-        
-    }
-
     
 
     /**
@@ -63,326 +40,89 @@ public JButton getBtnShowHidePassword() {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
-        jPanel12 = new javax.swing.JPanel();
-        jPanel13 = new javax.swing.JPanel();
-        jPanel14 = new javax.swing.JPanel();
-        jPanel15 = new javax.swing.JPanel();
-        jPanel16 = new javax.swing.JPanel();
-        jPanel17 = new javax.swing.JPanel();
-        jPanel18 = new javax.swing.JPanel();
-        jPanel19 = new javax.swing.JPanel();
-        jPanel20 = new javax.swing.JPanel();
-        jPanel21 = new javax.swing.JPanel();
-        jPanel22 = new javax.swing.JPanel();
-        jPanel23 = new javax.swing.JPanel();
-        jPanel24 = new javax.swing.JPanel();
-        jPanel25 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel26 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        email = new javax.swing.JTextField();
-        phoneNumber = new javax.swing.JTextField();
-        name = new javax.swing.JTextField();
-        password = new javax.swing.JTextField();
-        confirmPassword = new javax.swing.JTextField();
-        btnShowConfirm = new javax.swing.JButton();
-        btnshowPassword = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        btnSignup = new javax.swing.JLabel();
-        Login = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
-        jPanel14.setLayout(jPanel14Layout);
-        jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
-        jPanel16.setLayout(jPanel16Layout);
-        jPanel16Layout.setHorizontalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel16Layout.setVerticalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
-        jPanel19.setLayout(jPanel19Layout);
-        jPanel19Layout.setHorizontalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel19Layout.setVerticalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
-        jPanel20.setLayout(jPanel20Layout);
-        jPanel20Layout.setHorizontalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel20Layout.setVerticalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
-        jPanel21.setLayout(jPanel21Layout);
-        jPanel21Layout.setHorizontalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel21Layout.setVerticalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
-        jPanel22.setLayout(jPanel22Layout);
-        jPanel22Layout.setHorizontalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel22Layout.setVerticalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
-        jPanel23.setLayout(jPanel23Layout);
-        jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
-        jPanel24.setLayout(jPanel24Layout);
-        jPanel24Layout.setHorizontalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel24Layout.setVerticalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
-        jPanel25.setLayout(jPanel25Layout);
-        jPanel25Layout.setHorizontalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel25Layout.setVerticalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        emailAddress = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        phoneNumber = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        fullName = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        password = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        confirmPassword = new javax.swing.JTextField();
+        SignUpButton = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.setBackground(new java.awt.Color(70, 155, 230));
-        jPanel4.setVerifyInputWhenFocusTarget(false);
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setBackground(new java.awt.Color(82, 153, 211));
 
-        jPanel26.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Screenshot 2025-12-03 1313582000.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel3.setText("Email");
-        jPanel26.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 138, 222, -1));
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("       Clinical Management System");
 
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(393, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, -1));
+
+        jLabel3.setBackground(new java.awt.Color(51, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(51, 255, 255));
+        jLabel3.setText("Sign up as patient.");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 240, -1));
+
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("Phone number");
-        jPanel26.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 214, 222, -1));
+        jLabel4.setText("Email");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, 90, 30));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setText("Name");
-        jPanel26.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 139, -1));
-
-        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setText("Password");
-        jPanel26.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 356, 121, -1));
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel7.setText("Confirm Password");
-        jPanel26.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 440, 222, -1));
-
-        email.setText("Enter your email");
-        email.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        email.addFocusListener(new java.awt.event.FocusAdapter() {
+        emailAddress.setText("Enter your Email");
+        emailAddress.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                emailFocusGained(evt);
+                emailAddressFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                emailFocusLost(evt);
+                emailAddressFocusLost(evt);
             }
         });
-        email.addActionListener(this::emailActionPerformed);
-        jPanel26.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 164, 300, 44));
+        emailAddress.addActionListener(this::emailAddressActionPerformed);
+        getContentPane().add(emailAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 250, -1));
 
-        phoneNumber.setText("Enter your phone number");
-        phoneNumber.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setText("Phone Number");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, 130, 30));
+
+        phoneNumber.setText("Enter your Phone Number");
         phoneNumber.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 phoneNumberFocusGained(evt);
@@ -392,22 +132,28 @@ public JButton getBtnShowHidePassword() {
             }
         });
         phoneNumber.addActionListener(this::phoneNumberActionPerformed);
-        jPanel26.add(phoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 300, 41));
+        getContentPane().add(phoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 250, -1));
 
-        name.setText("Enter your name");
-        name.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        name.addFocusListener(new java.awt.event.FocusAdapter() {
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("Name");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 310, 80, -1));
+
+        fullName.setText("Enter your full Name");
+        fullName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                nameFocusGained(evt);
+                fullNameFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                nameFocusLost(evt);
+                fullNameFocusLost(evt);
             }
         });
-        jPanel26.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 300, 37));
+        getContentPane().add(fullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, 250, -1));
 
-        password.setText("Enter your password");
-        password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setText("Password");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, 110, -1));
+
+        password.setText("Enter your Password");
         password.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 passwordFocusGained(evt);
@@ -416,10 +162,14 @@ public JButton getBtnShowHidePassword() {
                 passwordFocusLost(evt);
             }
         });
-        jPanel26.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, 301, 44));
+        password.addActionListener(this::passwordActionPerformed);
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 250, -1));
 
-        confirmPassword.setText("Enter your password");
-        confirmPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setText("Confirm Password");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 450, 140, -1));
+
+        confirmPassword.setText("Enter your Confirm Password");
         confirmPassword.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 confirmPasswordFocusGained(evt);
@@ -428,80 +178,54 @@ public JButton getBtnShowHidePassword() {
                 confirmPasswordFocusLost(evt);
             }
         });
-        jPanel26.add(confirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, 300, 41));
+        getContentPane().add(confirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 480, 250, -1));
 
-        btnShowConfirm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/imageicon100.png"))); // NOI18N
-        btnShowConfirm.addActionListener(this::btnShowConfirmActionPerformed);
-        jPanel26.add(btnShowConfirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 450, 90, 20));
+        SignUpButton.setBackground(new java.awt.Color(0, 255, 255));
+        SignUpButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SignUpButton.setForeground(new java.awt.Color(255, 255, 255));
+        SignUpButton.setText("Sign Up");
+        SignUpButton.addActionListener(this::SignUpButtonActionPerformed);
+        getContentPane().add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 530, 110, -1));
 
-        btnshowPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/imageicon100.png"))); // NOI18N
-        jPanel26.add(btnshowPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 95, -1));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton2.setText("Login");
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 530, -1, 30));
 
-        jLabel8.setBackground(new java.awt.Color(0, 204, 255));
-        jLabel8.setForeground(new java.awt.Color(0, 204, 255));
-        jLabel8.setText("Already have an account.");
-        jPanel26.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 210, -1));
-
-        btnSignup.setForeground(new java.awt.Color(0, 204, 255));
-        btnSignup.setText("Sign up as patient.");
-        jPanel26.add(btnSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 190, -1));
-
-        Login.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        Login.setText("Login");
-        Login.addActionListener(this::LoginActionPerformed);
-        jPanel26.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 520, -1, -1));
-
-        jPanel4.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 0, 720, 850));
-
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Clinic Management System");
-        jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 329, 60));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Screenshot 2025-12-03 1313582000.jpg"))); // NOI18N
-        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 260, 130));
-
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 1170, 840));
+        jLabel9.setBackground(new java.awt.Color(51, 255, 255));
+        jLabel9.setForeground(new java.awt.Color(51, 255, 255));
+        jLabel9.setText("Already have an account?");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 570, 220, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnShowConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowConfirmActionPerformed
-    
-    
-
-    }//GEN-LAST:event_btnShowConfirmActionPerformed
-
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+    private void emailAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailAddressActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailActionPerformed
-
-    private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LoginActionPerformed
+    }//GEN-LAST:event_emailAddressActionPerformed
 
     private void phoneNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneNumberActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_phoneNumberActionPerformed
 
-    private void emailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusGained
+    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
         // TODO add your handling code here:
-        if(email.getText().equals("Enter your email")) {
-            email.setText("");
-        }
-    }//GEN-LAST:event_emailFocusGained
+    }//GEN-LAST:event_passwordActionPerformed
 
-    private void emailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusLost
-        // TODO add your handling code here:
-        if(email.getText().equals("")) {
-            email.setText("Enter your email");
+    private void emailAddressFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailAddressFocusGained
+        if(emailAddress.getText().equals("Enter your Email")) {
+            emailAddress.setText("");
         }
-    }//GEN-LAST:event_emailFocusLost
+    }//GEN-LAST:event_emailAddressFocusGained
+
+    private void emailAddressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailAddressFocusLost
+        if(emailAddress.getText().equals("")) {
+            emailAddress.setText("Enter your Email");
+        }
+    }//GEN-LAST:event_emailAddressFocusLost
 
     private void phoneNumberFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_phoneNumberFocusGained
         // TODO add your handling code here:
-        if(phoneNumber.getText().equals("Enter your phone number")) {
+        if(phoneNumber.getText().equals("Enter your Phone Number")) {
             phoneNumber.setText("");
         }
     }//GEN-LAST:event_phoneNumberFocusGained
@@ -509,55 +233,71 @@ public JButton getBtnShowHidePassword() {
     private void phoneNumberFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_phoneNumberFocusLost
         // TODO add your handling code here:
         if(phoneNumber.getText().equals("")) {
-            phoneNumber.setText("Enter your phone number");
+            phoneNumber.setText("Enter your Phone Number");
         }
-           
     }//GEN-LAST:event_phoneNumberFocusLost
 
-    private void nameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nameFocusGained
+    private void fullNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fullNameFocusGained
         // TODO add your handling code here:
-        if(name.getText().equals("Enter your name")) {
-            name.setText("");
+        if(fullName.getText().equals("Enter your full Name")) {
+            fullName.setText("");
         }
-    }//GEN-LAST:event_nameFocusGained
+    }//GEN-LAST:event_fullNameFocusGained
 
-    private void nameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nameFocusLost
+    private void fullNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fullNameFocusLost
         // TODO add your handling code here:
-        if(name.getText().equals("")) {
-            name.setText("Enter your name");
+        if(fullName.getText().equals("")) {
+            fullName.setText("Enter your full Name");
         }
-    }//GEN-LAST:event_nameFocusLost
+    }//GEN-LAST:event_fullNameFocusLost
 
     private void passwordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFocusGained
         // TODO add your handling code here:
-       if(password.getText().equals("Enter your password")) {
+        if(password.getText().equals("Enter your Password")) {
             password.setText("");
-        } 
+        }
     }//GEN-LAST:event_passwordFocusGained
 
     private void passwordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFocusLost
         // TODO add your handling code here:
-        if(password.getText().equals("")) {
-            password.setText("Enter your password");
+    if(password.getText().equals("")) {
+            password.setText("Enter your Password");
         }
+    
     }//GEN-LAST:event_passwordFocusLost
 
     private void confirmPasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_confirmPasswordFocusGained
         // TODO add your handling code here:
-        if(confirmPassword.getText().equals("Enter your password")) {
+    if(confirmPassword.getText().equals("Enter your Confirm Password")) {
             confirmPassword.setText("");
-        }
+        }    
     }//GEN-LAST:event_confirmPasswordFocusGained
 
     private void confirmPasswordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_confirmPasswordFocusLost
         // TODO add your handling code here:
-        if(confirmPassword.getText().equals("")) {
-            confirmPassword.setText("Enter your password");
-        }
+    if(confirmPassword.getText().equals("")) {
+            confirmPassword.setText("Enter your Confirm Password");
+        }      
     }//GEN-LAST:event_confirmPasswordFocusLost
-    
-    
-     public static void main(String args[]) {
+
+    private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
+        boolean success = controller.registerUser();
+
+    if (success) {
+        // Open Appointment screen
+        new BookAppointment().setVisible(true);
+
+        // Close SignUp screen
+        this.dispose();
+    } else {
+        JOptionPane.showMessageDialog(this, "Signup failed");
+    }
+    }//GEN-LAST:event_SignUpButtonActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -578,19 +318,13 @@ public JButton getBtnShowHidePassword() {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new SignUp().setVisible(true));
     }
-    /**
-     * @param args the command line arguments
-     */
-   
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Login;
-    private javax.swing.JButton btnShowConfirm;
-    private javax.swing.JLabel btnSignup;
-    private javax.swing.JButton btnshowPassword;
+    private javax.swing.JButton SignUpButton;
     private javax.swing.JTextField confirmPassword;
-    private javax.swing.JTextField email;
+    private javax.swing.JTextField emailAddress;
+    private javax.swing.JTextField fullName;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -599,72 +333,51 @@ public JButton getBtnShowHidePassword() {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
-    private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JTextField name;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField password;
     private javax.swing.JTextField phoneNumber;
     // End of variables declaration//GEN-END:variables
-
-    public String getEmail() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+ 
+    public void AddSignUpListener(ActionListener Listener) {
+        SignUp.addActionListener(Listener);
+    }
+        
+    public JButton getBtnSignup(javax.swing.JButton btnSignUp) {
+        return btnSignUp;
     }
 
-    public String getPhone() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public JTextField getTxtEmail() {
+        return emailAddress;
+  
+    }
+    public JTextField getTxtPhone() {
+       return phoneNumber;
+    }
+    public JTextField getTxtName() {
+    return fullName;
+    }
+    public JPasswordField getTxtPassword() {
+    
+    return new JPasswordField(password.getText());
+    }
+    public JPasswordField getTxtConfirmPassword() {
+    
+    return new JPasswordField(confirmPassword.getText());
     }
 
-    public String getPassword() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+   
 
-    public String getConfirmPassword() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    private static class controller {
 
-    public void clearFields() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+        private static boolean registerUser() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
 
-    public Object getBtnSignUp() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+        
 
-    public Object getTxtName() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public Object getTxtEmail() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public Object getTxtPhone() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public Object getTxtUsername() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public controller() {
+        }
     }
 }
 

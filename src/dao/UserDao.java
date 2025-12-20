@@ -3,12 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package dao;
-import Database.MySQLConnection;
-import Model.UserData;
+
+import database1.MySqlConnection;
+import model.User;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import javax.lang.model.SourceVersion;
+import java.sql.ResultSet;
 
 
 /**
@@ -16,42 +18,74 @@ import javax.lang.model.SourceVersion;
  * @author acer
  */
 public class UserDao {
-    
-    public boolean insertUser(UserData user){
-        boolean success = false;
+    MySqlConnection mysql = new MySqlConnection();
 
-        try{
-            Connection con = MySQLConnection.getConnection();
-            String sql = "INSERT INTO users(email, phone, name, password) VALUES(?,?,?,?)";
-            PreparedStatement ps = con.prepareStatement(sql);
-
-            ps.setString(1, user.getEmail());
-            ps.setString(2, user.getPhone());
-            ps.setString(3, user.getName());
-            ps.setString(4, user.getPassword());
-
-            ps.executeUpdate();
-            success = true;
-
-        }catch(SQLException e){
-            System.out.println("Insert Error: " + e.getMessage());
+    public boolean register(User user) {
+        
+        Connection conn = mysql.openconnection();
+       
+       
+        if (conn == null) {
+            System.out.println("UserDao: Failed to open DB connection");
+            return false;
+        }
+            String sql = "INSERT INTO users(name, email, phone, password) VALUES (?, ?, ?, ?)";
+            try
+            (PreparedStatement pstm = conn.prepareStatement(sql)){            
+            pstm.setString(1, user.getName());
+            pstm.setString(2, user.getEmail());
+            pstm.setString(3, user.getPhone());
+            pstm.setString(4, user.getPassword());
+            pstm.executeUpdate(); 
+            return true; 
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
 
-        return success;
+        return false;
     }
 
     
-    public SourceVersion getSupportedSourceVersion() {
-        return SourceVersion.latest();
-    }
+    public boolean checkUser(User user) {
 
-    public boolean registerUser(UserData user) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Connection conn = mysql.openconnection();
+       
+        if (conn == null) {
+            System.out.println("DB connection failed");
+            return false;
+        }
+
+        String sql = "SELECT * FROM users WHERE phone=? OR email=?";
+
+        try (PreparedStatement pstm = conn.prepareStatement(sql)) {
+
+            pstm.setString(1, user.getPhone());
+            pstm.setString(2, user.getEmail());
+
+            ResultSet rs = pstm.executeQuery();
+            return rs.next();
+
+        } catch (SQLException e) {
+            
+            e.printStackTrace();
+        
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return false;
     }
 }
-
-/**
- *
- * @author acer
- */
-
+                
+      
