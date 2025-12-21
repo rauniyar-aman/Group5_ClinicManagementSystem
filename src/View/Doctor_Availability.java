@@ -1,4 +1,4 @@
-package View;
+package view;
 
 /**
  *
@@ -45,7 +45,10 @@ public class Doctor_Availability extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(70, 155, 230));
 
         jButton2.setBackground(new java.awt.Color(222, 242, 251));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user_icon_72x72.png"))); // NOI18N
+        {
+            java.net.URL img = getClass().getResource("/Images/user_icon_72x72.png");
+            jButton2.setIcon(img != null ? new javax.swing.ImageIcon(img) : null);
+        }
         jButton2.addActionListener(this::jButton2ActionPerformed);
 
         jButton5.setBackground(new java.awt.Color(255, 102, 102));
@@ -58,7 +61,10 @@ public class Doctor_Availability extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CLINIC MANAGEMENT SYSTEM");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cms logo.png"))); // NOI18N
+        {
+            java.net.URL img = getClass().getResource("/Images/cms logo.png");
+            jLabel3.setIcon(img != null ? new javax.swing.ImageIcon(img) : null);
+        }
         jLabel3.setText("jLabel2");
         jLabel3.setPreferredSize(new java.awt.Dimension(38, 37));
 

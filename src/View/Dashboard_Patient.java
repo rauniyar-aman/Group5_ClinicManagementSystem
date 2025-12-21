@@ -1,5 +1,7 @@
 package view;
 
+import Controller.AppointmentController;
+
 /**
  *
  * @author amang
@@ -51,7 +53,10 @@ public class Dashboard_Patient extends javax.swing.JFrame {
         jButton3.addActionListener(this::jButton3ActionPerformed);
 
         jButton2.setBackground(new java.awt.Color(222, 242, 251));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user_icon_72x72.png"))); // NOI18N
+        {
+            java.net.URL img = getClass().getResource("/Images/user_icon_72x72.png");
+            jButton2.setIcon(img != null ? new javax.swing.ImageIcon(img) : null);
+        }
         jButton2.addActionListener(this::jButton2ActionPerformed);
 
         jButton5.setBackground(new java.awt.Color(255, 102, 102));
@@ -87,7 +92,10 @@ public class Dashboard_Patient extends javax.swing.JFrame {
                 .addGap(23, 23, 23))
         );
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cms logo.png"))); // NOI18N
+        {
+            java.net.URL img = getClass().getResource("/Images/cms logo.png");
+            jLabel3.setIcon(img != null ? new javax.swing.ImageIcon(img) : null);
+        }
         jLabel3.setText("jLabel2");
         jLabel3.setPreferredSize(new java.awt.Dimension(38, 37));
 
@@ -165,11 +173,19 @@ public class Dashboard_Patient extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        // View Prescriptions
+        View_Patient_Prescriptions view = new View_Patient_Prescriptions();
+        view.setLocationRelativeTo(this);
+        view.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        // Book Appointment
+        BookAppointment view = new BookAppointment();
+        AppointmentController controller = new AppointmentController(view);
+        view.setController(controller);
+        view.setLocationRelativeTo(this);
+        view.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

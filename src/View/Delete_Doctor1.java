@@ -1,4 +1,6 @@
-package View;
+package view;
+
+import Controller.DoctorController;
 
 /**
  *
@@ -44,7 +46,10 @@ public class Delete_Doctor1 extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(70, 155, 230));
 
         jButton2.setBackground(new java.awt.Color(222, 242, 251));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user_icon_72x72.png"))); // NOI18N
+        {
+            java.net.URL img = getClass().getResource("/Images/user_icon_72x72.png");
+            jButton2.setIcon(img != null ? new javax.swing.ImageIcon(img) : null);
+        }
         jButton2.addActionListener(this::jButton2ActionPerformed);
 
         jButton5.setBackground(new java.awt.Color(255, 102, 102));
@@ -57,7 +62,10 @@ public class Delete_Doctor1 extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CLINIC MANAGEMENT SYSTEM");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cms logo.png"))); // NOI18N
+        {
+            java.net.URL img = getClass().getResource("/Images/cms logo.png");
+            jLabel3.setIcon(img != null ? new javax.swing.ImageIcon(img) : null);
+        }
         jLabel3.setText("jLabel2");
         jLabel3.setPreferredSize(new java.awt.Dimension(38, 37));
 
@@ -87,6 +95,7 @@ public class Delete_Doctor1 extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(153, 255, 153));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("Find Doctor");
+        jButton1.addActionListener(this::findDoctorActionPerformed);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -102,6 +111,7 @@ public class Delete_Doctor1 extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(255, 0, 0));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton3.setText("Delete Doctor ");
+        jButton3.addActionListener(this::deleteDoctorActionPerformed);
 
         jButton4.setBackground(new java.awt.Color(255, 153, 153));
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -199,6 +209,19 @@ public class Delete_Doctor1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void findDoctorActionPerformed(java.awt.event.ActionEvent evt) {
+        // Optional: implement search using controller if needed
+    }
+
+    private void deleteDoctorActionPerformed(java.awt.event.ActionEvent evt) {
+        if (this.controller != null) {
+            String email = jTextField2.getText();
+            boolean ok = this.controller.deleteDoctor(email);
+            if (ok) javax.swing.JOptionPane.showMessageDialog(this, "Doctor deleted");
+            else javax.swing.JOptionPane.showMessageDialog(this, "No doctor found / error");
+        }
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -221,7 +244,23 @@ public class Delete_Doctor1 extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Delete_Doctor1().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> {
+            Delete_Doctor1 view = new Delete_Doctor1();
+            Controller.DoctorController controller = new Controller.DoctorController();
+            view.setController(controller);
+            view.setVisible(true);
+        });
+    }
+
+    // Controller hook
+    private DoctorController controller;
+
+    public void setController(DoctorController controller) {
+        this.controller = controller;
+        if (controller != null) {
+            jButton3.addActionListener(this::deleteDoctorActionPerformed);
+            jButton1.addActionListener(this::findDoctorActionPerformed);
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
