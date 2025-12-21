@@ -2,15 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package dao;
+package Dao;
 
-import database1.MySqlConnection;
-import model.User;
-
+import database.MySqlConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import model.User;
 
 
 /**
@@ -85,6 +84,17 @@ public class UserDao {
         }
 
         return false;
+    }
+
+    // Convenience overloads to support UserData1 usages from older UI code
+    public boolean checkUser(model.UserData1 userdata) {
+        User tmp = new User(userdata.getName(), userdata.getEmail(), userdata.getPhone(), userdata.getPassword());
+        return checkUser(tmp);
+    }
+
+    public boolean SignUp(model.UserData1 userdata) {
+        User tmp = new User(userdata.getName(), userdata.getEmail(), userdata.getPhone(), userdata.getPassword());
+        return register(tmp);
     }
 }
                 

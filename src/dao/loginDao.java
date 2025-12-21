@@ -4,34 +4,33 @@
  */
 package Dao;
 
-import Model.UserData;
+import database.MySqlConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import Database.MySqlConnection;
-
 
 /**
- *
- * @author Asus
+ * Login DAO that verifies email/password against `users` table.
  */
 public class loginDao {
-    MySqlConnection mysql = new MySqlConnection();    
-    public boolean Login(UserData user) {
+    private final MySqlConnection mysql = new MySqlConnection();
+
+    public boolean login(String email, String password) {
         Connection conn = mysql.openconnection();
-        String sql = "Select * from users where username = ? or password= ?";
-        try(PreparedStatement pstm = conn.prepareStatement(sql)){
-            pstm.setString(1, user.getUsername());
-            pstm.setString(2, user.getPassword());
-            ResultSet result = pstm.executeQuery();
-            return result.next();
-        }catch(SQLException e){
-            System.out.println(e);
-        }finally{
-            mysql.closeConnection(conn);
+        if (conn == null) return false;
+        String sql = "SELECT 1 FROM users WHERE email = ? AND password = ?";
+        try (PreparedStatement pstm = conn.prepareStatement(sql)) {
+            pstm.setString(1, email);
+            pstm.setString(2, password);
+            ResultSet rs = pstm.executeQuery();
+            return rs.next();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            try { conn.close(); } catch (SQLException ignore) {}
         }
-        return false;
     }
 }
 
