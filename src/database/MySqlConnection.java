@@ -40,7 +40,7 @@ public class MySqlConnection implements Database {
             } catch (ClassNotFoundException cnfe) {
                 System.out.println("MySQL JDBC Driver not found on classpath: " + cnfe.getMessage());
             }
-            String password = "Prabin@1";
+            String password = "Aman@2025#";
             String username = "root";
             String database = "Clinicdb";
             Connection connection;

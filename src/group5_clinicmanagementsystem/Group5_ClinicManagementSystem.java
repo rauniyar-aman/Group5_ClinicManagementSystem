@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package Group5_ClinicManagementSystem;
+package group5_clinicmanagementsystem;
 
-import Controller.UserController;
-import Dao.UserDao;
+import controller.UserController;
+import dao.UserDao;
 import database.Database;
 import database.MySqlConnection;
-import view.SignUp;
+import View.SignUp;
 /**
  *
  * @author oakin

@@ -1,6 +1,6 @@
-package view;
+package View;
 
-import Controller.DoctorController;
+import controller.DoctorController;
 
 /**
  *
@@ -139,7 +139,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // Profile button - open signUp (placeholder for real profile view)
+        // Profile button - open SignUp (placeholder for real profile view)
         this.dispose();
         SignUp s = new SignUp();
         s.setLocationRelativeTo(null);

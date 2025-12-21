@@ -1,6 +1,6 @@
-package Controller;
+package controller;
 
-import Dao.DoctorDao;
+import dao.DoctorDao;
 import model.Doctor;
 
 public class DoctorController {

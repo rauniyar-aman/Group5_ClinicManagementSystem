@@ -2,17 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Controller;
+package controller;
 
-import Dao.UserDao;
+import dao.UserDao;
+import dao.loginDao;
 import model.User;
-import view.SignUp;
+import View.SignUp;
 
 /**
  * Simple UserController providing registration service used by views or tests.
  */
 public class UserController {
     private final UserDao dao;
+    private final loginDao loginDao = new loginDao();
     private SignUp view;
 
     public UserController() {
@@ -38,7 +40,7 @@ public class UserController {
                     javax.swing.JOptionPane.showMessageDialog(view, "Registration successful");
                     // proceed to patient dashboard after successful sign-up
                     view.dispose();
-                    view.Dashboard_Patient dashboard = new view.Dashboard_Patient();
+                    View.Dashboard_Patient dashboard = new View.Dashboard_Patient();
                     dashboard.setLocationRelativeTo(null);
                     dashboard.setVisible(true);
                 } else {
@@ -56,6 +58,14 @@ public class UserController {
         if (name == null || email == null || password == null) return false;
         User user = new User(name, email, phone, password);
         return dao.register(user);
+    }
+
+    /**
+     * Logs in a user.
+     * @return true if login succeeded, false otherwise
+     */
+    public boolean login(String email, String password) {
+        return loginDao.login(email, password);
     }
 }
 

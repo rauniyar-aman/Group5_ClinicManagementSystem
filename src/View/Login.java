@@ -2,9 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package View;
 
 
+import controller.UserController;
+import dao.UserDao;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
@@ -19,6 +21,7 @@ import javax.swing.JOptionPane;
 public class Login extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login.class.getName());
+    private UserController controller = new UserController(new UserDao());
 
     /**
      * Creates new form NewJFrame
@@ -47,7 +50,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         chkShowPassword = new javax.swing.JCheckBox();
         btnLogin = new javax.swing.JButton();
-        btnExit = new javax.swing.JButton();
+        signUp = new javax.swing.JButton();
         txtPassword = new javax.swing.JPasswordField();
 
         jCheckBoxMenuItem1.setSelected(true);
@@ -59,7 +62,7 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(102, 204, 255));
 
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logoooooooo.jpg"))); // NOI18N
+        // logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logoooooooo.jpg"))); // NOI18N
         logo.setText("jLabel3");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -109,16 +112,16 @@ public class Login extends javax.swing.JFrame {
         btnLogin.setText("Login");
         btnLogin.addActionListener(this::btnLoginActionPerformed);
 
-        btnExit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnExit.setText("Exit");
-        btnExit.addActionListener(this::btnExitActionPerformed);
+        signUp.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        signUp.setText("Sign Up");
+        signUp.addActionListener(this::signUpActionPerformed);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(71, Short.MAX_VALUE)
+                .addContainerGap(70, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -127,7 +130,7 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(chkShowPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(17, 17, 17))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnExit)
+                        .addComponent(signUp)
                         .addGap(18, 18, 18)
                         .addComponent(btnLogin)
                         .addGap(67, 67, 67))))
@@ -150,7 +153,7 @@ public class Login extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLogin)
-                    .addComponent(btnExit))
+                    .addComponent(signUp))
                 .addGap(19, 19, 19)
                 .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(270, Short.MAX_VALUE))
@@ -171,9 +174,18 @@ public class Login extends javax.swing.JFrame {
 
     if (email.isEmpty() || password.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Please fill all fields!");
-      
+        return;
     }
 
+    boolean ok = controller.login(email, password);
+    if (ok) {
+        JOptionPane.showMessageDialog(this, "Login successful");
+        this.dispose();
+        Dashboard_Patient dashboard = new Dashboard_Patient();
+        dashboard.setVisible(true);
+    } else {
+        JOptionPane.showMessageDialog(this, "Invalid credentials");
+    }
   
     }//GEN-LAST:event_btnLoginActionPerformed
 
@@ -185,11 +197,13 @@ public class Login extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_chkShowPasswordActionPerformed
 
-    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-      System.exit(0);
+    private void signUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpActionPerformed
+      SignUp signup = new SignUp();
+        signup.setVisible(true);
+        this.dispose();
       
       
-    }//GEN-LAST:event_btnExitActionPerformed
+    }//GEN-LAST:event_signUpActionPerformed
 
     /**
      * 
@@ -218,7 +232,6 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnExit;
     private javax.swing.JButton btnLogin;
     private javax.swing.JCheckBox chkShowPassword;
     private javax.swing.Box.Filler filler1;
@@ -229,6 +242,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel logo;
+    private javax.swing.JButton signUp;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables

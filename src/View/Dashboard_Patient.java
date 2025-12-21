@@ -1,6 +1,6 @@
-package view;
+package View;
 
-import Controller.AppointmentController;
+import controller.AppointmentController;
 
 /**
  *

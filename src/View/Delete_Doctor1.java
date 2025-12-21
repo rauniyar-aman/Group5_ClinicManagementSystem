@@ -1,6 +1,6 @@
-package view;
+package View;
 
-import Controller.DoctorController;
+import controller.DoctorController;
 
 /**
  *
@@ -246,7 +246,7 @@ public class Delete_Doctor1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
             Delete_Doctor1 view = new Delete_Doctor1();
-            Controller.DoctorController controller = new Controller.DoctorController();
+            controller.DoctorController controller = new controller.DoctorController();
             view.setController(controller);
             view.setVisible(true);
         });

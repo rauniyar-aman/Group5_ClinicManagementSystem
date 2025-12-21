@@ -1,6 +1,6 @@
-package view;
+package View;
 
-import Controller.DoctorController;
+import controller.DoctorController;
 
 /**
  *
@@ -255,7 +255,7 @@ public class Add_Doctor extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
             Add_Doctor view = new Add_Doctor();
-            Controller.DoctorController controller = new Controller.DoctorController();
+            controller.DoctorController controller = new controller.DoctorController();
             view.setController(controller);
             view.setVisible(true);
         });

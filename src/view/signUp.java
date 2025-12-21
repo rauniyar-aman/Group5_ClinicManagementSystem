@@ -2,10 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package View;
+import controller.UserController;
+import dao.UserDao;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
+import javax.swing.JOptionPane;
 
 
 
@@ -20,6 +23,7 @@ public class SignUp extends javax.swing.JFrame {
 
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(SignUp.class.getName());
+    private UserController controller = new UserController(new UserDao());
 
     /**
      * Creates new form SignUp
@@ -77,9 +81,9 @@ public class SignUp extends javax.swing.JFrame {
         name = new javax.swing.JTextField();
         password = new javax.swing.JTextField();
         confirmPassword = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
         btnSignup = new javax.swing.JLabel();
         signUpBtn = new javax.swing.JButton();
+        logIn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
@@ -316,7 +320,6 @@ public class SignUp extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1920, 1100));
-        setPreferredSize(new java.awt.Dimension(1200, 900));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -412,19 +415,22 @@ public class SignUp extends javax.swing.JFrame {
         });
         jPanel26.add(confirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, 300, 41));
 
-        jLabel8.setBackground(new java.awt.Color(0, 204, 255));
-        jLabel8.setForeground(new java.awt.Color(0, 204, 255));
-        jLabel8.setText("Already have an account.");
-        jPanel26.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 210, -1));
-
         btnSignup.setForeground(new java.awt.Color(0, 204, 255));
         btnSignup.setText("Sign up as patient.");
         jPanel26.add(btnSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 190, -1));
 
         signUpBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         signUpBtn.setText("Sign Up");
+        signUpBtn.setBorder(null);
         signUpBtn.addActionListener(this::signUpBtnActionPerformed);
-        jPanel26.add(signUpBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 520, -1, -1));
+        jPanel26.add(signUpBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 530, 70, 30));
+
+        logIn.setBackground(new java.awt.Color(204, 255, 255));
+        logIn.setForeground(new java.awt.Color(102, 204, 255));
+        logIn.setText("Already have an account.");
+        logIn.setBorder(null);
+        logIn.addActionListener(this::logInActionPerformed);
+        jPanel26.add(logIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 170, 30));
 
         jPanel4.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 0, 720, 850));
 
@@ -434,10 +440,7 @@ public class SignUp extends javax.swing.JFrame {
         jLabel1.setText("Clinic Management System");
         jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 329, 60));
 
-        {
-            java.net.URL img = getClass().getResource("/Images/logoooooooo.jpg");
-            jLabel9.setIcon(img != null ? new javax.swing.ImageIcon(img) : null);
-        }
+        // jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logoooooooo.jpg"))); // NOI18N
         jLabel9.setText("jLabel9");
         jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 200, 170));
 
@@ -451,7 +454,35 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_emailActionPerformed
 
     private void signUpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpBtnActionPerformed
-        // TODO add your handling code here:
+        String name = getFullName().getText().trim();
+        String email = getEmailField().getText().trim();
+        String phone = getPhoneNumber().getText().trim();
+        String password = getPasswordField().getText().trim();
+        String confirmPass = getcPassword().getText().trim();
+
+        if (name.isEmpty() || name.equals("Enter your name") ||
+            email.isEmpty() || email.equals("Enter your email") ||
+            phone.isEmpty() || phone.equals("Enter your phone number") ||
+            password.isEmpty() || password.equals("Enter your password") ||
+            confirmPass.isEmpty() || confirmPass.equals("Enter your password")) {
+            JOptionPane.showMessageDialog(this, "Please fill all fields!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        if (!password.equals(confirmPass)) {
+            JOptionPane.showMessageDialog(this, "Passwords do not match!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        boolean ok = controller.registerUser(name, email, phone, password);
+        if (ok) {
+            JOptionPane.showMessageDialog(this, "Registration successful! Welcome to the Clinic Management System.", "Success", JOptionPane.INFORMATION_MESSAGE);
+            this.dispose();
+            Dashboard_Patient dashboard = new Dashboard_Patient();
+            dashboard.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "Registration failed. Please try again.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_signUpBtnActionPerformed
 
     private void phoneNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneNumberActionPerformed
@@ -528,6 +559,13 @@ public class SignUp extends javax.swing.JFrame {
             confirmPassword.setText("Enter your password");
         }
     }//GEN-LAST:event_confirmPasswordFocusLost
+
+    private void logInActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // Open the login page
+        Login login = new Login();
+        login.setVisible(true);
+        this.dispose();
+    }   
     
     
      public static void main(String args[]) {
@@ -567,7 +605,6 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -592,6 +629,7 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JButton logIn;
     private javax.swing.JTextField name;
     private javax.swing.JTextField password;
     private javax.swing.JTextField phoneNumber;
