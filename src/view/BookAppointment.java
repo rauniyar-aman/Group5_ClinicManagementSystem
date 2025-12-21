@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
-import controller.AppointmentController;
+import Controller.AppointmentController;
 import javax.swing.*;
 
 /**
@@ -105,7 +105,12 @@ public class BookAppointment extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new BookAppointment().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> {
+            BookAppointment view = new BookAppointment();
+            AppointmentController controller = new AppointmentController(view);
+            view.setController(controller);
+            view.setVisible(true);
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -118,77 +123,34 @@ public class BookAppointment extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JSpinner jSpinner1;
     // End of variables declaration//GEN-END:variables
-  public String getDepartment() {
-        return departmentCombo.getSelectedItem().toString();
+
+    // Controller wiring
+    private AppointmentController controller;
+
+    public void setController(AppointmentController controller) {
+        this.controller = controller;
+        if (controller != null) {
+            jButton1.addActionListener(e -> controller.bookAppointment());
+        }
+    }
+
+    public String getDepartment() {
+        return jComboBox1.getSelectedItem().toString();
     }
 
     public String getDoctor() {
-        return doctorCombo.getSelectedItem().toString();
+        return jComboBox2.getSelectedItem().toString();
     }
 
     public String getDate() {
-        return dateSpinner.getValue().toString();
+        return jSpinner1.getValue().toString();
     }
 
     public String getTime() {
-        return timeCombo.getSelectedItem().toString();
+        return jComboBox3.getSelectedItem().toString();
     }
 
     public void showMessage(String msg) {
         JOptionPane.showMessageDialog(this, msg);
-    }
-
-    private void bookButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        controller.bookAppointment();
-    }
-
-    private static class controller {
-
-        private static void bookAppointment() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        public controller() {
-        }
-    }
-
-    private static class timeCombo {
-
-        private static Object getSelectedItem() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        public timeCombo() {
-        }
-    }
-
-    private static class dateSpinner {
-
-        private static Object getValue() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        public dateSpinner() {
-        }
-    }
-
-    private static class doctorCombo {
-
-        private static Object getSelectedItem() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        public doctorCombo() {
-        }
-    }
-
-    private static class departmentCombo {
-
-        private static Object getSelectedItem() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        public departmentCombo() {
-        }
     }
 }

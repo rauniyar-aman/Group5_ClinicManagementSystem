@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package database1;
+package database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -35,7 +35,12 @@ public class MySqlConnection implements Database {
     @Override
     public Connection openconnection() {
  try{
-            String password = "12345";
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+            } catch (ClassNotFoundException cnfe) {
+                System.out.println("MySQL JDBC Driver not found on classpath: " + cnfe.getMessage());
+            }
+            String password = "Prabin@1";
             String username = "root";
             String database = "Clinicdb";
             Connection connection;

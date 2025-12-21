@@ -15,7 +15,10 @@ public class User {
     private String password;
 
     public User(String name, String email, String phone, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.password = password;
     }
     
     
