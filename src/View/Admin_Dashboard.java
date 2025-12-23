@@ -36,6 +36,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(70, 155, 230));
 
@@ -50,10 +51,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jButton3.addActionListener(this::jButton3ActionPerformed);
 
         jButton2.setBackground(new java.awt.Color(222, 242, 251));
-        {
-            java.net.URL img = getClass().getResource("/Images/user_icon_72x72.png");
-            jButton2.setIcon(img != null ? new javax.swing.ImageIcon(img) : null);
-        }
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/user_icon_72x72.png"))); // NOI18N
         jButton2.addActionListener(this::jButton2ActionPerformed);
 
         jButton5.setBackground(new java.awt.Color(255, 102, 102));
@@ -65,10 +63,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CLINIC MANAGEMENT SYSTEM");
 
-        {
-            java.net.URL img = getClass().getResource("/Images/cms logo.png");
-            jLabel3.setIcon(img != null ? new javax.swing.ImageIcon(img) : null);
-        }
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/cms logo.png"))); // NOI18N
         jLabel3.setText("jLabel2");
         jLabel3.setPreferredSize(new java.awt.Dimension(38, 37));
 
