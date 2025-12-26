@@ -13,6 +13,7 @@ public class View_Patient_Prescriptions extends javax.swing.JFrame {
      */
     public View_Patient_Prescriptions() {
         initComponents();
+        jButton3.addActionListener(this::goToDashboardActionPerformed);
     }
 
     /**
@@ -152,9 +153,11 @@ public class View_Patient_Prescriptions extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void goToDashboardActionPerformed(java.awt.event.ActionEvent evt) {
+        this.dispose();
+        Doctor_Dashboard dashboard = new Doctor_Dashboard();
+        dashboard.setVisible(true);
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

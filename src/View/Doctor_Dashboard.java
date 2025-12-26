@@ -60,6 +60,8 @@ public class Doctor_Dashboard extends javax.swing.JFrame {
 
         jButton6.setText("Logout");
 
+        jButton6.addActionListener(this::jButton6ActionPerformed);
+
         jButton4.setBackground(new java.awt.Color(153, 255, 153));
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton4.setText("View Patients' Prescriptions");
@@ -154,24 +156,30 @@ public class Doctor_Dashboard extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // Open My Availability
+        this.dispose();
         Doctor_Availability view = new Doctor_Availability();
-        view.setLocationRelativeTo(this);
         view.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // Open View Doctor Appointments
+        this.dispose();
         View_Doctor_Appointments view = new View_Doctor_Appointments();
-        view.setLocationRelativeTo(this);
         view.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // View patients' prescriptions
+        this.dispose();
         View_Patient_Prescriptions view = new View_Patient_Prescriptions();
-        view.setLocationRelativeTo(this);
         view.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {
+        this.dispose();
+        Login login = new Login();
+        login.setVisible(true);
+    }
 
     /**
      * @param args the command line arguments
@@ -195,7 +203,7 @@ public class Doctor_Dashboard extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Dashboard_Patient().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Doctor_Dashboard().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
