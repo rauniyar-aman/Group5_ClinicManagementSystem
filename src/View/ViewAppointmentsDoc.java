@@ -91,7 +91,7 @@ public class ViewAppointmentsDoc extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(70, 155, 230));
+        jPanel1.setBackground(new java.awt.Color(102, 204, 255));
 
         jLabel2.setBackground(new java.awt.Color(240, 230, 230));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N

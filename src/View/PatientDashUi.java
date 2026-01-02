@@ -84,7 +84,7 @@ public class PatientDashUi extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 700));
 
-        jPanel1.setBackground(new java.awt.Color(70, 155, 230));
+        jPanel1.setBackground(new java.awt.Color(102, 204, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1000, 700));
 
         viewNoticeBtn.setBackground(new java.awt.Color(153, 255, 153));

@@ -63,252 +63,178 @@ public class Patient_Edit_Info extends javax.swing.JFrame {
         @SuppressWarnings("unchecked")
         // <editor-fold defaultstate="collapsed" desc="Generated
         // <editor-fold defaultstate="collapsed" desc="Generated
-        // Code">//GEN-BEGIN:initComponents
-        private void initComponents() {
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
 
-                jPanel1 = new javax.swing.JPanel();
-                jButton2 = new javax.swing.JButton();
-                jLabel2 = new javax.swing.JLabel();
-                logOutBtn = new javax.swing.JButton();
-                jLabel3 = new javax.swing.JLabel();
-                jLabel1 = new javax.swing.JLabel();
-                goToDashboardBtn = new javax.swing.JButton();
-                jLabel4 = new javax.swing.JLabel();
-                nameTextField = new javax.swing.JTextField();
-                jLabel5 = new javax.swing.JLabel();
-                mobileNoTextField = new javax.swing.JTextField();
-                jPanel2 = new javax.swing.JPanel();
-                jLabel6 = new javax.swing.JLabel();
-                saveBtn = new javax.swing.JButton();
-                emailJLabel = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        logOutBtn = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        goToDashboardBtn = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        nameTextField = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        mobileNoTextField = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        saveBtn = new javax.swing.JButton();
+        emailJLabel = new javax.swing.JTextField();
 
-                setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-                setResizable(false);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
-                jPanel1.setBackground(new java.awt.Color(70, 155, 230));
+        jPanel1.setBackground(new java.awt.Color(102, 204, 255));
 
-                jButton2.setBackground(new java.awt.Color(222, 242, 251));
-                jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/user_icon_72x72.png"))); // NOI18N
-                jButton2.addActionListener(this::jButton2ActionPerformed);
+        jButton2.setBackground(new java.awt.Color(222, 242, 251));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/user_icon_72x72.png"))); // NOI18N
+        jButton2.addActionListener(this::jButton2ActionPerformed);
 
-                jLabel2.setBackground(new java.awt.Color(240, 230, 230));
-                jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-                jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-                jLabel2.setText("CLINIC MANAGEMENT SYSTEM");
+        jLabel2.setBackground(new java.awt.Color(240, 230, 230));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("CLINIC MANAGEMENT SYSTEM");
 
-                logOutBtn.setText("Logout");
-                logOutBtn.addActionListener(this::logOutBtnActionPerformed);
+        logOutBtn.setText("Logout");
+        logOutBtn.addActionListener(this::logOutBtnActionPerformed);
 
-                jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/cms logo.png"))); // NOI18N
-                jLabel3.setText("jLabel2");
-                jLabel3.setPreferredSize(new java.awt.Dimension(38, 37));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/cms logo.png"))); // NOI18N
+        jLabel3.setText("jLabel2");
+        jLabel3.setPreferredSize(new java.awt.Dimension(38, 37));
 
-                jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-                jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-                jLabel1.setText("Email ID:");
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Email ID:");
 
-                goToDashboardBtn.setBackground(new java.awt.Color(255, 153, 153));
-                goToDashboardBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-                goToDashboardBtn.setText("Go To Dashboard ");
-                goToDashboardBtn.addActionListener(this::goToDashboardBtnActionPerformed);
+        goToDashboardBtn.setBackground(new java.awt.Color(255, 153, 153));
+        goToDashboardBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        goToDashboardBtn.setText("Go To Dashboard ");
+        goToDashboardBtn.addActionListener(this::goToDashboardBtnActionPerformed);
 
-                jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-                jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-                jLabel4.setText("Name:");
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Name:");
 
-                jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-                jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-                jLabel5.setText("Mobile No.:");
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Mobile No:");
 
-                jPanel2.setBackground(new java.awt.Color(51, 255, 51));
+        jPanel2.setBackground(new java.awt.Color(51, 255, 51));
 
-                jLabel6.setBackground(new java.awt.Color(0, 204, 102));
-                jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-                jLabel6.setText("    Your Details");
+        jLabel6.setBackground(new java.awt.Color(0, 204, 102));
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("    Your Details");
 
-                javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-                jPanel2.setLayout(jPanel2Layout);
-                jPanel2Layout.setHorizontalGroup(
-                                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE, 118,
-                                                                Short.MAX_VALUE));
-                jPanel2Layout.setVerticalGroup(
-                                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 36,
-                                                                Short.MAX_VALUE));
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
 
-                saveBtn.setBackground(new java.awt.Color(153, 255, 153));
-                saveBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-                saveBtn.setText("Save Details");
-                saveBtn.addActionListener(this::saveBtnActionPerformed);
+        saveBtn.setBackground(new java.awt.Color(153, 255, 153));
+        saveBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        saveBtn.setText("Save Details");
+        saveBtn.addActionListener(this::saveBtnActionPerformed);
 
-                emailJLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-                emailJLabel.setText("email");
+        emailJLabel.addActionListener(this::emailJLabelActionPerformed);
 
-                javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-                jPanel1.setLayout(jPanel1Layout);
-                jPanel1Layout.setHorizontalGroup(
-                                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout
-                                                                .createSequentialGroup()
-                                                                .addGap(73, 73, 73)
-                                                                .addComponent(jLabel3,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(
-                                                                                javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(jLabel2,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                382,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(
-                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-                                                                                118, Short.MAX_VALUE)
-                                                                .addGroup(jPanel1Layout.createParallelGroup(
-                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addComponent(goToDashboardBtn)
-                                                                                .addGroup(jPanel1Layout
-                                                                                                .createSequentialGroup()
-                                                                                                .addComponent(logOutBtn)
-                                                                                                .addPreferredGap(
-                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                                .addComponent(jButton2)))
-                                                                .addGap(12, 12, 12))
-                                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                .addGroup(jPanel1Layout.createParallelGroup(
-                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addGroup(jPanel1Layout
-                                                                                                .createSequentialGroup()
-                                                                                                .addGap(61, 61, 61)
-                                                                                                .addGroup(jPanel1Layout
-                                                                                                                .createParallelGroup(
-                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                                .addComponent(jPanel2,
-                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                .addGroup(jPanel1Layout
-                                                                                                                                .createSequentialGroup()
-                                                                                                                                .addGroup(jPanel1Layout
-                                                                                                                                                .createParallelGroup(
-                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                                                                .addComponent(jLabel5)
-                                                                                                                                                .addComponent(jLabel4)
-                                                                                                                                                .addComponent(jLabel1))
-                                                                                                                                .addGap(18, 18, 18)
-                                                                                                                                .addGroup(jPanel1Layout
-                                                                                                                                                .createParallelGroup(
-                                                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                                                                .addComponent(nameTextField,
-                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                229,
-                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                .addComponent(mobileNoTextField,
-                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                226,
-                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                                                .addComponent(emailJLabel,
-                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                                                350,
-                                                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                                                                .addGroup(jPanel1Layout
-                                                                                                .createSequentialGroup()
-                                                                                                .addGap(242, 242, 242)
-                                                                                                .addComponent(saveBtn,
-                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                105,
-                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                Short.MAX_VALUE)));
-                jPanel1Layout.setVerticalGroup(
-                                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                .addContainerGap()
-                                                                .addGroup(jPanel1Layout.createParallelGroup(
-                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addGroup(jPanel1Layout
-                                                                                                .createSequentialGroup()
-                                                                                                .addGroup(jPanel1Layout
-                                                                                                                .createParallelGroup(
-                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                                .addComponent(logOutBtn)
-                                                                                                                .addComponent(jButton2))
-                                                                                                .addGap(123, 123, 123)
-                                                                                                .addGroup(jPanel1Layout
-                                                                                                                .createParallelGroup(
-                                                                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                                                .addComponent(nameTextField,
-                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                39,
-                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                .addComponent(jLabel4))
-                                                                                                .addGap(18, 18, 18)
-                                                                                                .addComponent(mobileNoTextField,
-                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                39,
-                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addGap(18, 18, 18)
-                                                                                                .addComponent(saveBtn,
-                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                33,
-                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addGap(74, 74, 74)
-                                                                                                .addComponent(goToDashboardBtn,
-                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                35,
-                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addGap(85, 85, 85))
-                                                                                .addGroup(jPanel1Layout
-                                                                                                .createSequentialGroup()
-                                                                                                .addGap(8, 8, 8)
-                                                                                                .addGroup(jPanel1Layout
-                                                                                                                .createParallelGroup(
-                                                                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                                                .addComponent(jLabel3,
-                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                                .addComponent(jLabel2,
-                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                49,
-                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                                                .addPreferredGap(
-                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-                                                                                                                9,
-                                                                                                                Short.MAX_VALUE)
-                                                                                                .addComponent(jPanel2,
-                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addGap(27, 27, 27)
-                                                                                                .addGroup(jPanel1Layout
-                                                                                                                .createParallelGroup(
-                                                                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                                                .addComponent(jLabel1)
-                                                                                                                .addComponent(emailJLabel,
-                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                                                32,
-                                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                                                .addGap(105, 105, 105)
-                                                                                                .addComponent(jLabel5)
-                                                                                                .addGap(282, 282,
-                                                                                                                282)))));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
+                .addComponent(logOutBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2)
+                .addGap(12, 12, 12))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(emailJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(mobileNoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(373, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(goToDashboardBtn)
+                        .addGap(20, 20, 20))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(logOutBtn)
+                            .addComponent(jButton2))
+                        .addGap(35, 35, 35)
+                        .addComponent(goToDashboardBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(15, 15, 15)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(emailJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(12, 12, 12)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(mobileNoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(331, 331, 331))
+        );
 
-                javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-                getContentPane().setLayout(layout);
-                layout.setHorizontalGroup(
-                                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
-                layout.setVerticalGroup(
-                                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
-                pack();
-        }// </editor-fold>//GEN-END:initComponents
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void emailJLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailJLabelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailJLabelActionPerformed
 
         private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton2ActionPerformed
                 javax.swing.JOptionPane.showMessageDialog(this, "Profile image editing is not available yet.");
@@ -370,23 +296,23 @@ public class Patient_Edit_Info extends javax.swing.JFrame {
                 java.awt.EventQueue.invokeLater(() -> new Patient_Edit_Info().setVisible(true));
         }
 
-        // Variables declaration - do not modify//GEN-BEGIN:variables
-        private javax.swing.JLabel emailJLabel;
-        private javax.swing.JButton goToDashboardBtn;
-        private javax.swing.JButton jButton2;
-        private javax.swing.JLabel jLabel1;
-        private javax.swing.JLabel jLabel2;
-        private javax.swing.JLabel jLabel3;
-        private javax.swing.JLabel jLabel4;
-        private javax.swing.JLabel jLabel5;
-        private javax.swing.JLabel jLabel6;
-        private javax.swing.JPanel jPanel1;
-        private javax.swing.JPanel jPanel2;
-        private javax.swing.JButton logOutBtn;
-        private javax.swing.JTextField mobileNoTextField;
-        private javax.swing.JTextField nameTextField;
-        private javax.swing.JButton saveBtn;
-        // End of variables declaration//GEN-END:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField emailJLabel;
+    private javax.swing.JButton goToDashboardBtn;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton logOutBtn;
+    private javax.swing.JTextField mobileNoTextField;
+    private javax.swing.JTextField nameTextField;
+    private javax.swing.JButton saveBtn;
+    // End of variables declaration//GEN-END:variables
 
         public void setPatientData(String name, String email, String mobile) {
                 nameTextField.setText(name != null ? name : "");

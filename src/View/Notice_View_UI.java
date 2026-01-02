@@ -55,10 +55,9 @@ public class Notice_View_UI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 700));
-        setPreferredSize(new java.awt.Dimension(1000, 700));
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(70, 155, 230));
+        jPanel1.setBackground(new java.awt.Color(102, 204, 255));
 
         jButton2.setBackground(new java.awt.Color(222, 242, 251));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/user_icon_72x72.png"))); // NOI18N

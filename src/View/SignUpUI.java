@@ -29,7 +29,7 @@ public class SignUpUI extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -88,7 +88,6 @@ public class SignUpUI extends javax.swing.JFrame {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 emailFocusGained(evt);
             }
-
             public void focusLost(java.awt.event.FocusEvent evt) {
                 emailFocusLost(evt);
             }
@@ -106,7 +105,6 @@ public class SignUpUI extends javax.swing.JFrame {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 phoneNumberFocusGained(evt);
             }
-
             public void focusLost(java.awt.event.FocusEvent evt) {
                 phoneNumberFocusLost(evt);
             }
@@ -124,7 +122,6 @@ public class SignUpUI extends javax.swing.JFrame {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 nameFocusGained(evt);
             }
-
             public void focusLost(java.awt.event.FocusEvent evt) {
                 nameFocusLost(evt);
             }
@@ -137,7 +134,6 @@ public class SignUpUI extends javax.swing.JFrame {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 passwordFocusGained(evt);
             }
-
             public void focusLost(java.awt.event.FocusEvent evt) {
                 passwordFocusLost(evt);
             }
@@ -150,16 +146,15 @@ public class SignUpUI extends javax.swing.JFrame {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 confirmPasswordFocusGained(evt);
             }
-
             public void focusLost(java.awt.event.FocusEvent evt) {
                 confirmPasswordFocusLost(evt);
             }
         });
         jPanel26.add(confirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, 300, 41));
 
-        btnSignup.setForeground(new java.awt.Color(0, 204, 255));
+        btnSignup.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnSignup.setText("Sign up as patient.");
-        jPanel26.add(btnSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 190, -1));
+        jPanel26.add(btnSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 190, 30));
 
         logIn.setBackground(new java.awt.Color(204, 255, 255));
         logIn.setText("Already have an account.");
@@ -187,7 +182,7 @@ public class SignUpUI extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Clinic Management System");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(40, 200, 370, 30);
+        jLabel1.setBounds(20, 410, 370, 32);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1000, 700);
